@@ -6,7 +6,7 @@ import os
 sns.set_theme(style="darkgrid")
 
 # Read in the data
-df = pd.read_csv('final_project/life_expectancy_by_country.csv')
+df = pd.read_csv('life_expectancy_by_country.csv')
 for col in df.columns:
     print(col)
 df_2019 = df[df['year'] == 2019]
