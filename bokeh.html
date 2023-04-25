@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js" integrity="sha384-T2yuo9Oe71Cz/I4X9Ac5+gpEa5a8PpJCDlqKYO0CfAuEszu1JrXLl8YugMqYe3sM" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="7abaa3ef-c03e-4bed-b8a3-cc4fd93eb44d" data-root-id="2878"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="3131">
+          {"0c7bb0e3-037c-4c33-a03c-79fb1c0ef18c":{"roots":{"references":[{"attributes":{"below":[{"id":"2888"}],"center":[{"id":"2890"},{"id":"2894"}],"left":[{"id":"2891"},{"id":"2934"}],"plot_height":675,"plot_width":900,"renderers":[{"id":"2913"},{"id":"2919"},{"id":"2925"},{"id":"2931"}],"title":{"id":"2879"},"toolbar":{"id":"2902"},"x_range":{"id":"2877"},"x_scale":{"id":"2884"},"y_range":{"id":"2933"},"y_scale":{"id":"2886"}},"id":"2878","subtype":"Figure","type":"Plot"},{"attributes":{"overlay":{"id":"2901"}},"id":"2897","type":"BoxZoomTool"},{"attributes":{"axis":{"id":"2888"},"ticker":null},"id":"2890","type":"Grid"},{"attributes":{},"id":"2886","type":"LinearScale"},{"attributes":{"axis_label":"Region","formatter":{"id":"3007"},"major_label_orientation":1,"ticker":{"id":"2889"}},"id":"2888","type":"CategoricalAxis"},{"attributes":{},"id":"3007","type":"CategoricalTickFormatter"},{"attributes":{"click_policy":"mute","items":[{"id":"2935"},{"id":"2936"},{"id":"2937"},{"id":"2938"}]},"id":"2934","type":"Legend"},{"attributes":{"fill_alpha":{"value":0.005},"fill_color":{"value":"#a1c9f4"},"line_alpha":{"value":0.005},"line_color":{"value":"#a1c9f4"},"top":{"field":"2020"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2912","type":"VBar"},{"attributes":{"source":{"id":"2876"}},"id":"2914","type":"CDSView"},{"attributes":{"label":{"value":"1980"},"renderers":[{"id":"2925"}]},"id":"2937","type":"LegendItem"},{"attributes":{},"id":"2900","type":"HelpTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#a1c9f4"},"line_alpha":{"value":0.1},"line_color":{"value":"#a1c9f4"},"top":{"field":"2020"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2911","type":"VBar"},{"attributes":{},"id":"2898","type":"SaveTool"},{"attributes":{"label":{"value":"1960"},"renderers":[{"id":"2931"}]},"id":"2938","type":"LegendItem"},{"attributes":{},"id":"2899","type":"ResetTool"},{"attributes":{},"id":"2895","type":"PanTool"},{"attributes":{},"id":"2889","type":"CategoricalTicker"},{"attributes":{},"id":"2884","type":"CategoricalScale"},{"attributes":{},"id":"2892","type":"BasicTicker"},{"attributes":{"data":{"1960":{"__ndarray__":"e3PK3TFSUUCg4YIkaEJRQDrS5dYweVFA3JAvx+bgUECYvqy0KtJEQG4tdN7F+1BAdY3lj76SS0D6D3El+GBGQJFgpRff+U5A6Zs+Z2uNRkCtVZxSYkNLQIxC5VzzCkZAKnTh+hW2REAiEKDtLexCQA==","dtype":"float64","order":"little","shape":[14]},"1980":{"__ndarray__":"R1cAcSllUkBPrYPoiDJSQL/4fdMncFJA85Rn0DuSUUBf13/bYC5QQN5Dwx/leFFAymUpBDfXT0BtmDi6FklNQPaEqz9v1lBAr5yTWkHhSkCtx4GMDnNPQHt57xB60UhAFyPtOkZJSEBj/g9Y84FHQA==","dtype":"float64","order":"little","shape":[14]},"2000":{"__ndarray__":"fo81XlWRU0Ayeej90URTQHh8xKByOFNAEZhaSnRIUkDiB2g4X+NRQFidSPgPLlJAeaTu3ZLOUUAtp5k0D1JRQBsl8bXVZFFAN9Tn7UxyT0CFkggDodlQQCPAwR90+0lAwC6mmtyhSUCV8Q38aBxJQA==","dtype":"float64","order":"little","shape":[14]},"2020":{"__ndarray__":"+EeVNGBiVEDQXSkpwx1UQPbXLTZvb1NAremH6J5BU0D0HmDFzzBTQBU3i9s3CVNAut4mTHVCUkDM9LV63jxSQNUqvN/KJFJA/ddap+RvUUCgK655Hl5RQHUA1m4sqE9AB57zd6hsTkDXsBrI+ZxMQA==","dtype":"float64","order":"little","shape":[14]},"country_name":["Euro area","European Union","North America","Europe &amp; Central Asia","East Asia &amp; Pacific","Central Europe and the Baltics","Latin America &amp; Caribbean","Middle East &amp; North Africa","Caribbean small states","South Asia","Pacific island small states","Africa Eastern and Southern","Sub-Saharan Africa","Africa Western and Central"]},"selected":{"id":"3009"},"selection_policy":{"id":"3010"}},"id":"2876","type":"ColumnDataSource"},{"attributes":{"axis_label":"Years","formatter":{"id":"3005"},"ticker":{"id":"2892"}},"id":"2891","type":"LinearAxis"},{"attributes":{"fill_alpha":{"value":0.3},"fill_color":{"value":"#ffb482"},"line_color":{"value":"#ffb482"},"top":{"field":"2000"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2916","type":"VBar"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"2895"},{"id":"2896"},{"id":"2897"},{"id":"2898"},{"id":"2899"},{"id":"2900"}]},"id":"2902","type":"Toolbar"},{"attributes":{"data_source":{"id":"2876"},"glyph":{"id":"2910"},"hover_glyph":null,"muted":false,"muted_glyph":{"id":"2912"},"nonselection_glyph":{"id":"2911"},"selection_glyph":null,"view":{"id":"2914"}},"id":"2913","type":"GlyphRenderer"},{"attributes":{"end":100},"id":"2933","type":"Range1d"},{"attributes":{"axis":{"id":"2891"},"dimension":1,"ticker":null},"id":"2894","type":"Grid"},{"attributes":{},"id":"3005","type":"BasicTickFormatter"},{"attributes":{"data_source":{"id":"2876"},"glyph":{"id":"2916"},"hover_glyph":null,"muted":true,"muted_glyph":{"id":"2918"},"nonselection_glyph":{"id":"2917"},"selection_glyph":null,"view":{"id":"2920"}},"id":"2919","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#ffb482"},"line_alpha":{"value":0.1},"line_color":{"value":"#ffb482"},"top":{"field":"2000"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2917","type":"VBar"},{"attributes":{},"id":"2896","type":"WheelZoomTool"},{"attributes":{},"id":"3010","type":"UnionRenderers"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#8de5a1"},"line_alpha":{"value":0.1},"line_color":{"value":"#8de5a1"},"top":{"field":"1980"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2923","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.3},"fill_color":{"value":"#a1c9f4"},"line_color":{"value":"#a1c9f4"},"top":{"field":"2020"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2910","type":"VBar"},{"attributes":{"source":{"id":"2876"}},"id":"2920","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.005},"fill_color":{"value":"#ffb482"},"line_alpha":{"value":0.005},"line_color":{"value":"#ffb482"},"top":{"field":"2000"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2918","type":"VBar"},{"attributes":{},"id":"3009","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.3},"fill_color":{"value":"#8de5a1"},"line_color":{"value":"#8de5a1"},"top":{"field":"1980"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2922","type":"VBar"},{"attributes":{"data_source":{"id":"2876"},"glyph":{"id":"2922"},"hover_glyph":null,"muted":true,"muted_glyph":{"id":"2924"},"nonselection_glyph":{"id":"2923"},"selection_glyph":null,"view":{"id":"2926"}},"id":"2925","type":"GlyphRenderer"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","top_units":"screen"},"id":"2901","type":"BoxAnnotation"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#ff9f9b"},"line_alpha":{"value":0.1},"line_color":{"value":"#ff9f9b"},"top":{"field":"1960"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2929","type":"VBar"},{"attributes":{"text":"Life expectancy by region in select years"},"id":"2879","type":"Title"},{"attributes":{"source":{"id":"2876"}},"id":"2926","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.005},"fill_color":{"value":"#8de5a1"},"line_alpha":{"value":0.005},"line_color":{"value":"#8de5a1"},"top":{"field":"1980"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2924","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.3},"fill_color":{"value":"#ff9f9b"},"line_color":{"value":"#ff9f9b"},"top":{"field":"1960"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2928","type":"VBar"},{"attributes":{"data_source":{"id":"2876"},"glyph":{"id":"2928"},"hover_glyph":null,"muted":false,"muted_glyph":{"id":"2930"},"nonselection_glyph":{"id":"2929"},"selection_glyph":null,"view":{"id":"2932"}},"id":"2931","type":"GlyphRenderer"},{"attributes":{"factors":["Euro area","European Union","North America","Europe &amp; Central Asia","East Asia &amp; Pacific","Central Europe and the Baltics","Latin America &amp; Caribbean","Middle East &amp; North Africa","Caribbean small states","South Asia","Pacific island small states","Africa Eastern and Southern","Sub-Saharan Africa","Africa Western and Central"]},"id":"2877","type":"FactorRange"},{"attributes":{"source":{"id":"2876"}},"id":"2932","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.005},"fill_color":{"value":"#ff9f9b"},"line_alpha":{"value":0.005},"line_color":{"value":"#ff9f9b"},"top":{"field":"1960"},"width":{"value":0.7},"x":{"field":"country_name"}},"id":"2930","type":"VBar"},{"attributes":{"label":{"value":"2020"},"renderers":[{"id":"2913"}]},"id":"2935","type":"LegendItem"},{"attributes":{"label":{"value":"2000"},"renderers":[{"id":"2919"}]},"id":"2936","type":"LegendItem"}],"root_ids":["2878"]},"title":"Bokeh Application","version":"2.2.3"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('3131').textContent;
+                  var render_items = [{"docid":"0c7bb0e3-037c-4c33-a03c-79fb1c0ef18c","root_ids":["2878"],"roots":{"2878":"7abaa3ef-c03e-4bed-b8a3-cc4fd93eb44d"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
