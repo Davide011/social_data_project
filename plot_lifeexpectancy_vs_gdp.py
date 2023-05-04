@@ -53,7 +53,7 @@ plt.plot(np.exp(x), y, alpha=0.5, c='darkgreen')
 # annotate Japan with country name, make point bigger
 df = df.loc[df['year'].isin([2019]), :]
 for row in df.index:
-    if df.loc[row, 'country_name'] in ['Japan', 'Germany', 'Italy']:
+    if df.loc[row, 'country_name'] in ['Japan', 'Germany', 'Italy', 'United States']:
         plt.scatter(data=df.loc[row, :], x='GDP', y='value', c='black', marker='o', s=10, alpha=1)
         plt.text(x=df.loc[row, 'GDP'] + 0.2, y=df.loc[row, 'value'] + 0.3 - 1.6*(df.loc[row, 'country_name'] == 'Germany'), s=df.loc[row, 'country_name'], fontsize=8)
 
@@ -63,10 +63,10 @@ for row in df.index:
 
 
 # plt.legend(title='Year')  
-plt.title('Life expectancy vs GDP for countries in 2019')
+plt.title('Life Expectancy Vs. GDP per Capita for Countries in 2019')
 # plt.xscale('log')
 # make y axis go from 0 to 100
 plt.ylim(40, 90)
-plt.xlabel('GDP (in USD)')
-plt.ylabel('Life expectancy (years)')
+plt.xlabel('GDP per Capita (current US$)')
+plt.ylabel('Life Expectancy at Birth (years)')
 plt.show()
