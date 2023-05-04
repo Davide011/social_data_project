@@ -6,7 +6,7 @@ import os
 sns.set_theme(style="darkgrid")
 
 # Read in the data
-df = pd.read_csv('final_project/data_life.csv')
+df = pd.read_csv('data_life.csv')
 # print(df['Indicator'], df['Location'] , df['Period'], df['Value'])
 df = df[['Indicator', 'Location', 'Period', 'Value', 'Dim1', 'Dim2']]
 # print(df.head(20))
