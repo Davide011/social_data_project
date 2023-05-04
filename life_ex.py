@@ -67,7 +67,7 @@ plt.ylabel('Life expectancy at Birth (years)')
 plt.show()
 
 """
-"""
+
 import pandas as pd
 physical_activity = pd.read_csv('data/physical_ac.csv')
 # only include data for countries USA, Japan, Germany, Italy
@@ -99,10 +99,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 # Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
 sns.barplot(data=physical_activity, x='Country Name', y='Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)', palette="Blues_r")
-plt.title('Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)')
+plt.title('Prevalence of Insufficient Physical Activity for 18+ Years Adults')
 plt.ylabel('%') 
 plt.xlabel('Country')
 plt.show()
+
 
 """
 import pandas as pd
@@ -139,10 +140,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 # Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
 sns.barplot(data=sui, x='Unnamed: 0', y='Age-standardized suicide rates (per 100 000 population)', palette="Blues_r")
-plt.title('Age-standardized Suicide Rates (per 100 000 population)')
+plt.title('Suicide Rates (per 100 000 population)')
 plt.ylabel('Occurence/100000') 
 plt.xlabel('Country')
 plt.show()
-
+"""
 
 
