@@ -1,3 +1,4 @@
+"""
 import pandas as pd
 life_ex = pd.read_csv('data/API_SP.DYN.LE00.IN_DS2_en_csv_v2_5358385.csv', skiprows=4)
 health_ex = pd.read_csv('data/API_SH.XPD.CHEX.PC.CD_DS2_en_csv_v2_5359940.csv', skiprows=4)
@@ -64,3 +65,84 @@ plt.xlim(0, 12000)
 plt.xlabel('Health Expenditure per Capita (current US$)')
 plt.ylabel('Life expectancy at Birth (years)')
 plt.show()
+
+"""
+"""
+import pandas as pd
+physical_activity = pd.read_csv('data/physical_ac.csv')
+# only include data for countries USA, Japan, Germany, Italy
+
+physical_activity = physical_activity[physical_activity['Unnamed: 0'].isin(['United States of America', 'Japan', 'Germany', 'Italy'])]
+
+# Only include columns Unnamed: 0 and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)
+physical_activity = physical_activity[['Unnamed: 0', 'Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)']]
+
+# rename columns to Country Name
+physical_activity.rename(columns={'Unnamed: 0': 'Country Name', 'Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)': 'Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)'}, inplace=True)
+
+# In column Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) remove the 12 last characters
+physical_activity['Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)'] = physical_activity['Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)'].str[:-12]
+
+# In column Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) convert to float
+physical_activity['Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)'] = physical_activity['Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)'].astype(float)
+
+# sort by Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)
+physical_activity.sort_values(by='Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)', ascending = False, inplace=True)
+
+# reset index
+physical_activity.reset_index(drop=True, inplace=True)
+
+# Rename united states of america to United States
+physical_activity['Country Name'] = physical_activity['Country Name'].str.replace('United States of America', 'United States')
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+# Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
+sns.barplot(data=physical_activity, x='Country Name', y='Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)', palette="Blues_r")
+plt.title('Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)')
+plt.ylabel('%') 
+plt.xlabel('Country')
+plt.show()
+
+"""
+import pandas as pd
+sui = pd.read_csv('data/sui.csv')
+
+# Only keep the first three columns 
+sui = sui.iloc[:, :3]
+
+# drop firs row
+sui.drop(0, inplace=True)
+
+sui['Age-standardized suicide rates (per 100 000 population)'] = sui['Age-standardized suicide rates (per 100 000 population)'].str[:4]
+
+sui['Age-standardized suicide rates (per 100 000 population)'] = sui['Age-standardized suicide rates (per 100 000 population)'].astype(float)
+
+sui = sui[sui['Unnamed: 1'] == 'Both sexes']
+
+sui = sui[['Unnamed: 0', 'Age-standardized suicide rates (per 100 000 population)']]
+
+# Only include countries 
+
+sui = sui[sui['Unnamed: 0'].isin(['United States of America', 'Japan', 'Germany', 'Italy'])]
+
+# sort by Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)
+sui.sort_values(by='Age-standardized suicide rates (per 100 000 population)', ascending = False, inplace=True)
+
+# reset index
+sui.reset_index(drop=True, inplace=True)
+
+# Rename united states of america to United States
+sui['Unnamed: 0'] = sui['Unnamed: 0'].str.replace('United States of America', 'United States')
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+# Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
+sns.barplot(data=sui, x='Unnamed: 0', y='Age-standardized suicide rates (per 100 000 population)', palette="Blues_r")
+plt.title('Age-standardized Suicide Rates (per 100 000 population)')
+plt.ylabel('Occurence/100000') 
+plt.xlabel('Country')
+plt.show()
+
+
+
