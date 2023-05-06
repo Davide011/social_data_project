@@ -230,10 +230,20 @@ for i, country in enumerate(['Japan', 'Denmark', 'Deutchland', 'Brazil', 'USA', 
 
 # Edit the layout
 fig.update_layout(title='Chance of surviving till age for various countries and times',
-                   xaxis_title='Age',
+                   xaxis_title='Age (years)',
                    yaxis_title='Chance of surviving to this age (%)',
                    yaxis_range=[0,100],
                    xaxis_range=[0,100])
+# annotations = []
+# annotations.append(dict(xref='paper', yref='paper', x=50, y=-10,
+#                               xanchor='center', yanchor='top',
+#                               text='Source: https://www.lifetable.de/',
+#                               font=dict(family='Arial',
+#                                         size=50,
+#                                         color='rgb(150,150,150)'),
+#                               showarrow=False))
 
+# fig.update_layout(annotations=annotations)
 
-fig.show()
+# fig.show()
+fig.write_html("Survival_rate.html")
