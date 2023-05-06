@@ -177,7 +177,7 @@ plt.ylabel('%')
 plt.xlabel('Country')
 plt.show()
 """
-
+"""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -200,3 +200,22 @@ plt.title('Daily Caloric Supply - 2018')
 plt.ylabel('kcal') 
 plt.xlabel('Country')
 plt.show()
+"""
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+oldest = pd.read_csv('GDP_data/life_cap.csv')
+life_ex_df = pd.read_csv('GDP_data/life_expectancy_by_country.csv')
+
+# make line plot in with both lines of oldest and life_ex_df
+# set sns theme
+sns.set_theme(style="darkgrid")
+sns.lineplot(data=oldest, x='year', y='age', color = "green")
+sns.lineplot(data=life_ex_df, x='year', y='age', color = "red")
+plt.title('Oldest Person Alive vs. Life Expectancy at Birth (world)')
+plt.ylabel('Age')
+plt.xlabel('Year')
+plt.legend(['Age of Oldest Person', 'Life Expectancy'])
+plt.show()
+
+
