@@ -67,7 +67,7 @@ plt.ylabel('Life expectancy at Birth (years)')
 plt.show()
 
 """
-
+"""
 import pandas as pd
 physical_activity = pd.read_csv('data/physical_ac.csv')
 # only include data for countries USA, Japan, Germany, Italy
@@ -99,10 +99,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 # Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
 sns.barplot(data=physical_activity, x='Country Name', y='Prevalence of Insufficient Physical Activity for 18+ Years Adults (age-standardized estimate)', palette="Blues_r")
-plt.title('Prevalence of Insufficient Physical Activity for 18+ Years Adults')
+plt.title('Prevalence of Insufficient Physical Activity for 18+ Years Adults - 2019')
 plt.ylabel('%') 
 plt.xlabel('Country')
 plt.show()
+"""
 
 
 """
@@ -140,10 +141,62 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 # Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
 sns.barplot(data=sui, x='Unnamed: 0', y='Age-standardized suicide rates (per 100 000 population)', palette="Blues_r")
-plt.title('Suicide Rates (per 100 000 population)')
+plt.title('Suicide Rates (per 100 000 population) - 2016')
 plt.ylabel('Occurence/100000') 
 plt.xlabel('Country')
 plt.show()
 """
 
+"""
+import pandas as pd
+exercise_df = pd.read_csv('data/exercise_dat.csv')
+exercise_df
 
+# sort by mu_hours
+exercise_df.sort_values(by='mu_hours', ascending = False, inplace=True)
+exercise_df
+import seaborn as sns
+import matplotlib.pyplot as plt
+# Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
+sns.barplot(data=exercise_df, x='Country', y='mu_hours', palette="Blues_r")
+plt.title('Mean Number of Hours of Physical Exercise/week - 2021')
+plt.ylabel('Hours') 
+plt.xlabel('Country')
+plt.show()
+"""
+"""
+import pandas as pd
+obese = pd.read_csv('data/obesity.csv')
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+# Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
+sns.barplot(data=obese, x='name', y='value', palette="Greens_r")
+plt.title('Obesity, Adult Prevalence - 2016')
+plt.ylabel('%') 
+plt.xlabel('Country')
+plt.show()
+"""
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+kalo = pd.read_csv('data/daily-per-capita-caloric-supply.csv')
+kalo = kalo[kalo['Year']==2018]
+
+kalo = kalo[kalo['Entity'].isin(['United States', 'Japan', 'Germany', 'Italy'])]
+
+
+# sort by Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%)
+kalo.sort_values(by='Daily caloric supply (OWID based on UN FAO & historical sources)', ascending = False, inplace=True)
+
+# reset index
+kalo.reset_index(drop=True, inplace=True)
+
+
+# Make bar plot with countries on x axis and Prevalence of insufficient physical activity among adults aged 18+ years (age-standardized estimate) (%) on y axis in sns theme
+sns.barplot(data=kalo, x='Entity', y='Daily caloric supply (OWID based on UN FAO & historical sources)', palette="Greens_r")
+plt.title('Daily Caloric Supply - 2018')
+plt.ylabel('kcal') 
+plt.xlabel('Country')
+plt.show()
