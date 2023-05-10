@@ -201,6 +201,7 @@ plt.ylabel('kcal')
 plt.xlabel('Country')
 plt.show()
 """
+"""
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -217,5 +218,120 @@ plt.ylabel('Age')
 plt.xlabel('Year')
 plt.legend(['Age of Oldest Person', 'Life Expectancy'])
 plt.show()
+
+"""
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+# load data
+#chosen quantile
+Q= 0.9
+## ITALY
+#df_IT2000= pd.read_excel(r"C:\Users\david\Desktop\CORSI ORAAA\SOCIAL_DATA\FINAL PROJECT\project\social_data_project-master\Cause\italy2000.xlsx")
+df_IT2019 = pd.read_excel("data/italy (1).xlsx")
+
+df_IT2019=df_IT2019.sort_values(by=['Death rate per 100 000 population'],ascending=False)
+z=df_IT2019['Death rate per 100 000 population'].quantile(q=Q,interpolation='linear')
+df_IT2019_1=df_IT2019.loc[df_IT2019['Death rate per 100 000 population'] >= z]
+## GERMANY
+#df_GE2000= pd.read_excel(r"C:\Users\david\Desktop\CORSI ORAAA\SOCIAL_DATA\FINAL PROJECT\project\social_data_project-master\Cause\germany2000.xlsx")
+df_GE2019 = pd.read_excel("data/germany (1).xlsx")
+df_GE2019=df_GE2019.sort_values(by=['Death rate per 100 000 population'],ascending=False)
+
+y=df_GE2019['Death rate per 100 000 population'].quantile(q=Q,interpolation='linear')
+df_GE2019_1=df_GE2019.loc[df_GE2019['Death rate per 100 000 population'] >= y]
+
+## JAPAN
+#df_JA2000= pd.read_excel(r"C:\Users\david\Desktop\CORSI ORAAA\SOCIAL_DATA\FINAL PROJECT\project\social_data_project-master\Cause\japan2000.xlsx")
+df_JA2019 = pd.read_excel("data/japan (1).xlsx")
+df_JA2019= df_JA2019.sort_values(by=['Death rate per 100 000 population'],ascending=False)
+df_JA2019
+x=df_JA2019['Death rate per 100 000 population'].quantile(q=Q,interpolation='linear')
+
+#// extract the top 50% of the data df_JA2019['Death rate per 100 000 population']
+df_JA2019_1=df_JA2019.loc[df_JA2019['Death rate per 100 000 population'] >= x]
+
+df_US2019 = pd.read_excel("data/united_states.xlsx")
+df_US2019= df_US2019.sort_values(by=['Death rate per 100 000 population'],ascending=False)
+df_US2019
+w=df_US2019['Death rate per 100 000 population'].quantile(q=Q,interpolation='linear')
+
+#// extract the top 50% of the data df_JA2019['Death rate per 100 000 population']
+df_US2019_1=df_US2019.loc[df_US2019['Death rate per 100 000 population'] >= w]
+
+print("IT:", df_IT2019_1.shape)
+print("GE:", df_GE2019_1.shape)
+print("JA:", df_JA2019_1.shape)
+print("US:", df_US2019_1.shape)
+
+
+#// plot with sns  3 barplot
+
+
+fig, ax = plt.subplots(1,2, figsize=(20, 20), sharey=    False)
+fig.suptitle('Top 5 Causes of Death by Country in 2019', fontsize=16)
+
+sns.barplot(ax=ax[0], y="Death rate per 100 000 population", x="Cause", data=df_IT2019_1, palette="Blues_r")
+ax[0].set_xticklabels(ax[0].get_xticklabels(), rotation=40, ha="right", fontsize=10)
+ax[0].set_title('Italy 2019')
+ax[0].set_ylabel('Death rate per 100 000 population')
+ax[0].set_xlabel('Cause')
+ax[0].set_ylim(0, 180)
+sns.barplot(ax=ax[1], y="Death rate per 100 000 population", x="Cause", data=df_GE2019_1, palette="Blues_r")
+ax[1].set_xticklabels(ax[1].get_xticklabels(), rotation=40, ha="right", fontsize=10)
+
+ax[1].set_title('Germany 2019')
+ax[1].set_ylabel('Death rate per 100 000 population')
+ax[1].set_xlabel('Cause')
+ax[1].set_ylim(0, 180)
+#sns.barplot(ax=ax[2], y="Death rate per 100 000 population", x="Cause", data=df_JA2019_1, palette="Blues_r")
+
+"""
+ax[2].set_xticklabels(ax[2].get_xticklabels(), rotation=40, ha="right", fontsize=7)
+
+ax[2].set_ylim(0, 180)
+
+
+ax[2].set_title('Japan 2019')
+ax[2].set_ylabel('Death rate per 100 000 population')
+ax[2].set_xlabel('Cause')
+"""
+plt.show()
+
+
+#// plot with sns  3 barplot
+
+
+fig, ax = plt.subplots(1,2, figsize=(20, 5), sharey=    False)
+fig.suptitle('Top 5 Causes of Death by Country in 2019', fontsize=16)
+
+sns.barplot(ax=ax[0], y="Death rate per 100 000 population", x="Cause", data=df_IT2019_1, palette="Blues_r")
+ax[0].set_xticklabels(ax[0].get_xticklabels(), rotation=40, ha="right", fontsize=10)
+ax[0].set_title('Italy 2019')
+ax[0].set_ylabel('Death rate per 100 000 population')
+ax[0].set_xlabel('Cause')
+ax[0].set_ylim(0, 180)
+sns.barplot(ax=ax[1], y="Death rate per 100 000 population", x="Cause", data=df_GE2019_1, palette="Blues_r")
+ax[1].set_xticklabels(ax[1].get_xticklabels(), rotation=40, ha="right", fontsize=10)
+
+ax[1].set_title('Germany 2019')
+ax[1].set_ylabel('Death rate per 100 000 population')
+ax[1].set_xlabel('Cause')
+ax[1].set_ylim(0, 180)
+#sns.barplot(ax=ax[2], y="Death rate per 100 000 population", x="Cause", data=df_JA2019_1, palette="Blues_r")
+
+"""
+ax[2].set_xticklabels(ax[2].get_xticklabels(), rotation=40, ha="right", fontsize=7)
+
+ax[2].set_ylim(0, 180)
+
+
+ax[2].set_title('Japan 2019')
+ax[2].set_ylabel('Death rate per 100 000 population')
+ax[2].set_xlabel('Cause')
+"""
+plt.show()
+
+
 
 
