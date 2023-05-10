@@ -2,9 +2,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-import plotly.graph_objects as go
-import plotly.express as px
-import plotly.io as pio
 sns.set_theme()
 
 oldest = pd.read_csv('GDP_data/life_cap.csv')
@@ -55,9 +52,9 @@ for i in [1, 0.1]:
     else:
         plt.plot(only_years_after_1960, only_LE_after_1960, label="Life expectancy in Japan")
     
-plt.plot(oldest['year'][1:], oldest['age'][1:], label="Oldest man in the world")
+plt.plot(oldest['year'][1:], oldest['age'][1:], label="Oldest human in the world")
 plt.legend()
-plt.title("Age of oldest man compared to life expectancy in Japan")
+plt.title("Age of oldest human compared to life expectancy in Japan")
 plt.xlabel("Year")
 plt.ylabel("Life expectancy (years)")
 plt.show()
