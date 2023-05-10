@@ -245,5 +245,5 @@ fig.update_layout(title='Chance of surviving till age for various countries and 
 
 # fig.update_layout(annotations=annotations)
 
-# fig.show()
+fig.show()
 fig.write_html("Survival_rate.html")
