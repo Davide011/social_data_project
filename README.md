@@ -53,20 +53,6 @@ By combining **statistical reasoning**, **data storytelling**, and **human-cente
 | **Data Sources** | World Bank Open Data, Global Development Indicators |
 | **Soft Skills** | Analytical Thinking, Data Storytelling, Insight Communication |
 
----
-
-## 🎯 Why This Project Matters
-
-This project illustrates the **real-world application of data science for social and economic understanding**, transforming large-scale development data into actionable, visual insights.  
-
-It reflects:
-- Analytical rigor and technical fluency in Python-based data analysis.  
-- Strong storytelling and communication skills.  
-- A structured approach to data-driven exploration and interpretation.  
-
-These qualities are key for professionals in **Data Science**, **Analytics**, and **Product Management** roles at organizations such as **Google**, **OpenAI**, **Meta**, and **Microsoft**.
-
----
 
 ## 🚀 Live Demo
 
@@ -83,19 +69,12 @@ These qualities are key for professionals in **Data Science**, **Analytics**, an
 
 ---
 
-## 💡 Summary
-
-> “**How data science transforms global development data into human understanding.**”
-
-This repository demonstrates the integration of **exploratory analysis**, **visual storytelling**, and **rigorous data preparation** — fundamental to high-quality analytical work and decision-making.
-
----
 
 ## 👩‍💻 Authors
 
-**- Daniele De Nadai**  
-**- Silvia Cacace**  
-**- Edoardo Galimberti**
+**- Davide Venuto**  
+**- Jakob Boëtius Andersen**  
+**- Huayuan Song**
 
 ---
 
