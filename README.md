@@ -1,11 +1,12 @@
 # 🌍 Life Expectancy Data Analysis & Visualization  
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/Deep--Learning-PyTorch-ee4c2c.svg)](https://pytorch.org/)
-[![YOLOv5](https://img.shields.io/badge/Detection-YOLOv5-FF6600.svg)](https://github.com/ultralytics/yolov5)
-[![Faster R-CNN](https://img.shields.io/badge/Detection-Faster_R--CNN-6f42c1.svg)](https://pytorch.org/vision/stable/models.html#faster-r-cnn)
-[![VGG16](https://img.shields.io/badge/CNN-VGG16-008080.svg)](https://pytorch.org/vision/stable/models.html#vgg)
-[![OpenCV](https://img.shields.io/badge/Vision-OpenCV-0055FF.svg)](https://opencv.org/)
+[![Pandas](https://img.shields.io/badge/Data%20Processing-pandas-150458.svg)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/Numerical%20Computing-NumPy-013243.svg)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-11557c.svg)](https://matplotlib.org/)
+[![Seaborn](https://img.shields.io/badge/Data%20Viz-Seaborn-2E8B57.svg)](https://seaborn.pydata.org/)
+[![Plotly](https://img.shields.io/badge/Interactive%20Viz-Plotly-3F4F75.svg)](https://plotly.com/)
+[![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-F37626.svg)](https://jupyter.org/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
 ---
