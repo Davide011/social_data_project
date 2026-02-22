@@ -3,6 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Data%20Processing-pandas-150458.svg)](https://pandas.pydata.org/)
 [![NumPy](https://img.shields.io/badge/Numerical%20Computing-NumPy-013243.svg)](https://numpy.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-F7931E.svg)](https://scikit-learn.org/)
 [![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-11557c.svg)](https://matplotlib.org/)
 [![Seaborn](https://img.shields.io/badge/Data%20Viz-Seaborn-2E8B57.svg)](https://seaborn.pydata.org/)
 [![Plotly](https://img.shields.io/badge/Interactive%20Viz-Plotly-3F4F75.svg)](https://plotly.com/)
@@ -48,7 +49,7 @@ By combining **statistical reasoning**, **data storytelling**, and **human-cente
 
 | Category | Tools & Techniques |
 |-----------|--------------------|
-| **Programming & Data Processing** | Python, Pandas, NumPy |
+| **Programming & Data Processing** | Python, Pandas, NumPy, Scikit-Learn |
 | **Visualization & Storytelling** | Matplotlib, Seaborn, Plotly |
 | **Statistical & Exploratory Analysis** | Correlation, Regression, Feature Engineering |
 | **Data Sources** | World Bank Open Data, Global Development Indicators |
